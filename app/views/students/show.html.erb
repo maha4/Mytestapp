@@ -1,0 +1,20 @@
+<div>
+<p>
+  <b>Name:</b>
+  <%= best_in_place @student, :name, :inner_class => 'purr' %>
+</p>
+<p>
+  <b>Email:</b>
+  <%= best_in_place @student, :email %>
+</p>
+<p>
+  <b>Gender:</b>
+  <%= best_in_place @student, :gender, type: :select, collection: [["Male", "Male"], ["Female", "Female"], ["", "Unspecified"]] %>
+</p>
+<p>
+  <b>Bio:</b>
+  <%= best_in_place @student, :bio, type: :textarea %>
+</p>
+<%= link_to 'Edit', edit_student_path(@student) %> |
+<%= link_to 'Back', students_path %>
+</div>

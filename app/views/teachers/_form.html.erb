@@ -1,0 +1,64 @@
+<html>
+
+<head>
+
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js">
+
+  </script>
+
+  <script>
+
+      $(document).ready(function(){
+          $("#toggle-button").click(function(){
+              $("#myname span").toggle();
+          });
+          $("#myname span").css("color","green");
+          $("#teacher-form").click(function(event) {
+              if (($("#name").val()== '') ||
+                      ($("#course").val() == '')) {
+
+                  event.preventDefault();
+
+                  alert("Fill in the fields");
+              }
+
+
+              else
+              {
+
+                  $("#submittest").submit();
+                  alert("From has been submitted");
+
+              }
+          });
+      });
+
+  </script>
+
+</head>
+
+<body>
+
+<form id="submittest" action="#">
+
+  First name:
+
+  <input type="text" id="name"><br>
+
+  Course:
+
+
+  <div id="myname">
+    <span>my name is maha...</span>
+  </div>
+
+  <input type="text" id="course"><br>
+
+  <input type="button" value="submit now" id="teacher-form">
+  <input type="button" value="Toggle" id="toggle-button" >
+
+</form>
+
+</body>
+
+</html>

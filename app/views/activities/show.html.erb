@@ -1,0 +1,7 @@
+<h1>Activity information</h1>
+<%= @activity.name%></br>
+<%= @activity.description%></br>
+<%= @activity.lat_long%></br>
+<td><%= image_tag @activity.avatar.url %></td>
+<%= link_to 'Edit', edit_activity_path(@activity) %> |
+<%= link_to 'Back', activities_path %>

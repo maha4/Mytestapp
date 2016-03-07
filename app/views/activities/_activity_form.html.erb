@@ -1,0 +1,28 @@
+<div style="text-align:center"><h1>Activity form!!!!!!!!!!!!</h1></div>
+<div class="row">
+  <div class="col-md-4"></div>
+<div class="col-md-4">
+  <div id="activity"></div>
+  <%= form_for @activity ,  remote: true do |f| %>
+    <div class="field">
+      <%=f.label :name%>
+      <%=f.text_field :name, placeholder: "Enter name", class: 'form-control' %>
+    </div>
+    </br>
+    <div class="field">
+      <%=f.label :description%>
+      <%=f.text_field :description , placeholder: "Enter description", class: 'form-control'%>
+    </div></br>
+    <div class="field">
+      <%=f.label :lat_long%>
+      <%=f.text_field :lat_long , placeholder: "Enter lat-long", class: 'form-control'%>
+    </div></br>
+    <div class="action">
+      <%= f.submit "Submit", class: "btn btn-default btn-primary"%>
+
+    </div>
+  <% end %>
+  <div class="col-md-4"></div>
+
+</div>
+</div>

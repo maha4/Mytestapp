@@ -1,0 +1,15 @@
+#purr-container .purr {
+  position: fixed;
+  top: 30px;
+  right: 100px;
+  width: 250px;
+  padding: 20px;
+  background-color: #FCC;
+  border: solid 2px #666;
+  color: red;
+  &:first-letter { text-transform: uppercase };
+}
+
+#purr-container {
+  color: red !important;
+}

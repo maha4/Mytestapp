@@ -1,0 +1,14 @@
+<h1>User information</h1>
+<%= @user.name%></br>
+<%= @user.sur_name%></br>
+<%= @user.designation%></br>
+<%= @user.cell_number%></br>
+<%= @user.employee_name%></br>
+
+<%= image_tag @user.avatar.url %>
+<%= image_tag @user.avatar.url(:medium) %>
+<%= image_tag @user.avatar.url(:thumb) %>
+
+<%= link_to 'Edit', edit_user_path(@user) %> |
+<%= link_to 'Back', employees_path %>
+<%= link_to image_tag(@user.profile_picture.url(:med)), @user.profile_picture.url %>
